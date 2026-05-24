@@ -1,0 +1,182 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import { postgresAdapter } from '@payloadcms/db-postgres';
+import { lexicalEditor } from '@payloadcms/richtext-lexical';
+import { UserCredentialsCollection } from '@saas-factory/auth';
+import {
+  AuthorsCollection,
+  CategoriesCollection,
+  PostsCollection,
+  PostSeriesCollection,
+  TagsCollection,
+} from '@saas-factory/cms-blog';
+import {
+  ClickEventsCollection,
+  CtaBlocksCollection,
+  LeadCapturesCollection,
+  LeadMagnetsCollection,
+  NewsletterSubscribersCollection,
+} from '@saas-factory/cms-blog-marketing';
+import { CommentsCollection } from '@saas-factory/cms-comments';
+import { FaqCategoriesCollection, FaqItemsCollection } from '@saas-factory/cms-faq';
+import { FormsCollection, FormSubmissionsCollection } from '@saas-factory/cms-forms';
+import { buildPagesCollection } from '@saas-factory/cms-pages';
+import { BrokenLinksCollection } from '@saas-factory/cms-seo';
+import { buildConfig } from 'payload';
+import sharp from 'sharp';
+
+import { CourseChapters } from './collections/course-chapters.js';
+import { CoursePages } from './collections/course-pages.js';
+import { Courses } from './collections/courses.js';
+import { Media } from './collections/media.js';
+import { Products } from './collections/products.js';
+import { ShopPages } from './collections/shop-pages.js';
+import { WorkflowExecutions } from './collections/workflow-executions.js';
+import { WorkflowRegistry } from './collections/workflow-registry.js';
+import { withHomepageUniqueValidator } from './lib/payload-homepage-validate.js';
+import { withRevalidateHooks } from './lib/payload-revalidate.js';
+import {
+  BLOG_PREFIX,
+  COURSE_PREFIX,
+  SHOP_PREFIX,
+  cmsPagePaths,
+  localizedPaths,
+} from './lib/route-paths.js';
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
+/**
+ * Payload 主設定。
+ * 各模組的 collection 將於後續 goal（01 core / 02 payment / 03 shop ...）逐步加入。
+ * 目前僅含最小可運行設定：Users collection + Postgres adapter。
+ */
+export default buildConfig({
+  admin: {
+    user: 'users',
+  },
+  collections: [
+    {
+      slug: 'users',
+      auth: {
+        // 防爆破：5 次失敗鎖 10 分鐘（對應 OWASP A07）
+        maxLoginAttempts: 5,
+        lockTime: 600_000,
+        // cookie 預設 Strict（避免 CSRF）
+        cookies: { sameSite: 'Strict' },
+        // session 有效期 7 天，refresh 在 1 天內到期自動續
+        tokenExpiration: 7 * 24 * 60 * 60,
+      },
+      admin: {
+        useAsTitle: 'email',
+        description:
+          '後台使用者。owner / admin 預設應於 7 天內啟用 TOTP 2FA（見 docs/customer/delivery-sop.md）。',
+      },
+      fields: [
+        {
+          name: 'role',
+          type: 'select',
+          // 寫進 JWT 讓 middleware 可在 edge 端讀取 role 做路由決策（實際 auth 仍由 Payload 把關）
+          saveToJWT: true,
+          options: [
+            { label: 'Owner', value: 'owner' },
+            { label: 'Admin', value: 'admin' },
+            { label: 'Editor', value: 'editor' },
+            { label: 'Viewer', value: 'viewer' },
+          ],
+          defaultValue: 'editor',
+          admin: { description: '影響 2FA 強制 + 後台權限' },
+        },
+        {
+          name: 'totpSecret',
+          type: 'text',
+          admin: { hidden: true, description: 'TOTP base32 secret（不要外洩）' },
+        },
+        {
+          name: 'totpEnabled',
+          type: 'checkbox',
+          // 寫進 JWT 讓 middleware 判斷是否需要 2FA session cookie
+          saveToJWT: true,
+          defaultValue: false,
+          admin: { description: '是否已啟用 TOTP 2FA' },
+        },
+        {
+          name: 'totpEnabledAt',
+          type: 'date',
+          admin: { description: '2FA 啟用時間（7 天緩衝期判斷依據）' },
+        },
+        {
+          name: 'recoveryCodes',
+          type: 'json',
+          admin: {
+            hidden: true,
+            description: '一次性救援碼（sha-256 hashed，使用後自陣列移除）',
+          },
+        },
+      ],
+    },
+    Media,
+    CategoriesCollection,
+    TagsCollection,
+    AuthorsCollection,
+    PostSeriesCollection,
+    Products,
+    Courses,
+    CourseChapters,
+    withRevalidateHooks(withHomepageUniqueValidator(buildPagesCollection()), {
+      revalidatePaths: cmsPagePaths,
+    }),
+    withRevalidateHooks(ShopPages, {
+      revalidatePaths: (doc) =>
+        localizedPaths(SHOP_PREFIX, typeof doc?.slug === 'string' ? doc.slug : ''),
+    }),
+    withRevalidateHooks(CoursePages, {
+      revalidatePaths: (doc) =>
+        localizedPaths(COURSE_PREFIX, typeof doc?.slug === 'string' ? doc.slug : ''),
+    }),
+    withRevalidateHooks(PostsCollection, {
+      revalidatePaths: (doc) =>
+        localizedPaths(BLOG_PREFIX, typeof doc?.slug === 'string' ? doc.slug : ''),
+    }),
+    /* CMS 模組 collection（form / faq / comments / blog-marketing / seo broken-links）
+     * 在後台暴露，前台路由 / API 端視各模組需求另接（goal-06 / goal-07）。
+     * Revalidate hook 不套——這些 collection 內容由各自 API 拉，不直接走 Next ISR 路徑。
+     */
+    FormsCollection,
+    FormSubmissionsCollection,
+    FaqCategoriesCollection,
+    FaqItemsCollection,
+    CommentsCollection,
+    CtaBlocksCollection,
+    LeadMagnetsCollection,
+    LeadCapturesCollection,
+    NewsletterSubscribersCollection,
+    ClickEventsCollection,
+    BrokenLinksCollection,
+    UserCredentialsCollection,
+    WorkflowExecutions,
+    WorkflowRegistry,
+  ],
+  localization: {
+    locales: [
+      { label: '繁體中文', code: 'zh-TW' },
+      { label: 'English', code: 'en' },
+    ],
+    defaultLocale: 'zh-TW',
+    fallback: true,
+  },
+  editor: lexicalEditor(),
+  secret: process.env.PAYLOAD_SECRET ?? 'dev-secret-change-me',
+  typescript: {
+    outputFile: path.resolve(dirname, 'payload-types.ts'),
+  },
+  db: postgresAdapter({
+    pool: {
+      connectionString:
+        process.env.DATABASE_URL ??
+        'postgres://postgres:postgres@localhost:5432/saas_factory_bootstrap',
+    },
+  }),
+  sharp,
+});

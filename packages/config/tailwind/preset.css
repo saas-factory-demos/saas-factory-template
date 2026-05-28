@@ -1,0 +1,26 @@
+/*
+ * @saas-factory/tailwind-config — Tailwind 4 共用 preset。
+ * 在 app 端：@import "@saas-factory/tailwind-config/preset.css";
+ *
+ * 設計偏好（依 CLAUDE.md §4 圓角設計）：
+ *   - 按鈕 8px / 小圖 12px / 卡片 14px / 大區塊 16px / hero 20px
+ *   - 柔和陰影、半透明邊框、200ms ease-out 過渡
+ */
+
+@theme {
+  /* 圓角 tokens（覆寫 Tailwind 預設） */
+  --radius-sm: 0.5rem;     /* 8px  按鈕 */
+  --radius-md: 0.75rem;    /* 12px 小圖 */
+  --radius-lg: 0.875rem;   /* 14px 卡片 */
+  --radius-xl: 1rem;       /* 16px 大區塊 */
+  --radius-2xl: 1.25rem;   /* 20px hero 主視覺 */
+  --radius-3xl: 1.5rem;    /* 24px 特大區塊 */
+
+  /* 過渡：依 CLAUDE.md 統一 200ms ease-out */
+  --default-transition-duration: 200ms;
+  --default-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* 半透明邊框（避免硬灰邊） */
+  --color-border-soft: rgba(0, 0, 0, 0.1);
+  --color-border-soft-dark: rgba(255, 255, 255, 0.1);
+}

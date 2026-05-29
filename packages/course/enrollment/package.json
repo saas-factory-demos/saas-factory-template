@@ -1,0 +1,24 @@
+{
+  "name": "@saas-factory/course-enrollment",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@saas-factory/eslint-config": "workspace:*",
+    "@saas-factory/tsconfig": "workspace:*",
+    "eslint": "^9.17.0",
+    "payload": "^3.0.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "payload": "^3.0.0"
+  }
+}

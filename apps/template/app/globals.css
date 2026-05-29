@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "@saas-factory/tailwind-config/preset.css";
+
+:root {
+  color-scheme: light dark;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang TC",
+    "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background: #fafafa;
+  color: #111;
+}

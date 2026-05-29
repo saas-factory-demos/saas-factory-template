@@ -1,0 +1,42 @@
+{
+  "name": "saas-factory",
+  "version": "0.1.0",
+  "private": true,
+  "description": "多類型網站工廠（CMS / LP / 電商 / 課程 / 部落格）",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "test": "turbo test",
+    "test:e2e": "playwright test --project=chromium",
+    "test:e2e:all": "playwright test",
+    "test:e2e:lighthouse": "playwright test --project=lighthouse",
+    "test:e2e:install": "playwright install --with-deps chromium",
+    "test:visual": "playwright test --config=playwright.visual.config.ts",
+    "test:visual:update": "playwright test --config=playwright.visual.config.ts --update-snapshots",
+    "clean": "turbo clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.3",
+    "@playwright/test": "^1.49.1",
+    "@saas-factory/factory-support-access": "workspace:*",
+    "@types/node": "^22.10.5",
+    "playwright-lighthouse": "^4.0.0",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "overrides": {
+      "dompurify@>=3.0.1 <3.4.0": ">=3.4.0",
+      "uuid@>=11.0.0 <11.1.1": ">=11.1.1",
+      "postcss@<8.5.10": ">=8.5.10",
+      "esbuild@<=0.24.2": "^0.25.0",
+      "vite@<=6.4.1": "^6.4.2"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "@saas-factory/tailwind-config/preset.css";
+
+/* Tailwind 4 預設只掃 apps/template 自己的檔案；以下 @source 強制掃 workspace 內
+ * 所有用到 arbitrary brand color class（如 text-[hsl(var(--color-primary-500))]）的
+ * frontend package，否則該 class 不會 emit 到 compiled CSS → 元件 className 是空殼。
+ * 對應 bug：原本整站 hero/CTA/sections brand 色全失效。 */
+@source "../../../packages/frontend/blocks-library/src/**/*.{ts,tsx}";
+@source "../../../packages/frontend/block-renderer/src/**/*.{ts,tsx}";
+@source "../../../packages/frontend/ui-primitives/src/**/*.{ts,tsx}";
+@source "../../../packages/frontend/industry-templates/src/**/*.{ts,tsx}";
+@source "../../../packages/frontend/motion-system/src/**/*.{ts,tsx}";
+
+/* 由 generator apply-theme step 寫入，含 wizard.theme 對應的完整色階 / radius / typography
+ * 等 CSS var。必須在 preset.css 之後 import 才能覆蓋 base layer 預設值。
+ * 本檔案在 generator 跑過後一定存在；本機 dev 若無，先複製 theme.css 即可。 */
+@import "./theme.css";
+
+:root {
+  color-scheme: light dark;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family-stack, ui-sans-serif), system-ui, -apple-system, "Segoe UI",
+    "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background: hsl(var(--color-background, 0 0% 98%));
+  color: hsl(var(--color-foreground, 0 0% 7%));
+}

@@ -1,0 +1,40 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+.next/
+.turbo/
+dist/
+build/
+out/
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# editor
+.vscode/
+.idea/
+.DS_Store
+
+# testing
+coverage/
+test-results/
+playwright-report/
+
+# typescript
+*.tsbuildinfo
+
+# payload
+media/
+
+# Frontend Factory 規格參考庫（Claude Code 查用，不入版控）
+docs/_reference/
+.vercel

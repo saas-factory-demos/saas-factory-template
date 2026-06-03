@@ -1,0 +1,810 @@
+{
+  "generated": [
+    {
+      "slug": "saas-general",
+      "camel": "saasGeneral",
+      "productType": "SaaS (General)"
+    },
+    {
+      "slug": "micro-saas",
+      "camel": "microSaas",
+      "productType": "Micro SaaS"
+    },
+    {
+      "slug": "e-commerce",
+      "camel": "eCommerce",
+      "productType": "E-commerce"
+    },
+    {
+      "slug": "e-commerce-luxury",
+      "camel": "eCommerceLuxury",
+      "productType": "E-commerce Luxury"
+    },
+    {
+      "slug": "b2b-service",
+      "camel": "b2bService",
+      "productType": "B2B Service"
+    },
+    {
+      "slug": "financial-dashboard",
+      "camel": "financialDashboard",
+      "productType": "Financial Dashboard"
+    },
+    {
+      "slug": "analytics-dashboard",
+      "camel": "analyticsDashboard",
+      "productType": "Analytics Dashboard"
+    },
+    {
+      "slug": "healthcare-app",
+      "camel": "healthcareApp",
+      "productType": "Healthcare App"
+    },
+    {
+      "slug": "educational-app",
+      "camel": "educationalApp",
+      "productType": "Educational App"
+    },
+    {
+      "slug": "creative-agency",
+      "camel": "creativeAgency",
+      "productType": "Creative Agency"
+    },
+    {
+      "slug": "portfolio-personal",
+      "camel": "portfolioPersonal",
+      "productType": "Portfolio/Personal"
+    },
+    {
+      "slug": "gaming",
+      "camel": "gaming",
+      "productType": "Gaming"
+    },
+    {
+      "slug": "government-public-service",
+      "camel": "governmentPublicService",
+      "productType": "Government/Public Service"
+    },
+    {
+      "slug": "fintech-crypto",
+      "camel": "fintechCrypto",
+      "productType": "Fintech/Crypto"
+    },
+    {
+      "slug": "social-media-app",
+      "camel": "socialMediaApp",
+      "productType": "Social Media App"
+    },
+    {
+      "slug": "productivity-tool",
+      "camel": "productivityTool",
+      "productType": "Productivity Tool"
+    },
+    {
+      "slug": "design-system-component-library",
+      "camel": "designSystemComponentLibrary",
+      "productType": "Design System/Component Library"
+    },
+    {
+      "slug": "ai-chatbot-platform",
+      "camel": "aiChatbotPlatform",
+      "productType": "AI/Chatbot Platform"
+    },
+    {
+      "slug": "nft-web3-platform",
+      "camel": "nftWeb3Platform",
+      "productType": "NFT/Web3 Platform"
+    },
+    {
+      "slug": "creator-economy-platform",
+      "camel": "creatorEconomyPlatform",
+      "productType": "Creator Economy Platform"
+    },
+    {
+      "slug": "remote-work-collaboration-tool",
+      "camel": "remoteWorkCollaborationTool",
+      "productType": "Remote Work/Collaboration Tool"
+    },
+    {
+      "slug": "mental-health-app",
+      "camel": "mentalHealthApp",
+      "productType": "Mental Health App"
+    },
+    {
+      "slug": "pet-tech-app",
+      "camel": "petTechApp",
+      "productType": "Pet Tech App"
+    },
+    {
+      "slug": "smart-home-iot-dashboard",
+      "camel": "smartHomeIotDashboard",
+      "productType": "Smart Home/IoT Dashboard"
+    },
+    {
+      "slug": "ev-charging-ecosystem",
+      "camel": "evChargingEcosystem",
+      "productType": "EV/Charging Ecosystem"
+    },
+    {
+      "slug": "subscription-box-service",
+      "camel": "subscriptionBoxService",
+      "productType": "Subscription Box Service"
+    },
+    {
+      "slug": "podcast-platform",
+      "camel": "podcastPlatform",
+      "productType": "Podcast Platform"
+    },
+    {
+      "slug": "dating-app",
+      "camel": "datingApp",
+      "productType": "Dating App"
+    },
+    {
+      "slug": "micro-credentials-badges-platform",
+      "camel": "microCredentialsBadgesPlatform",
+      "productType": "Micro-Credentials/Badges Platform"
+    },
+    {
+      "slug": "knowledge-base-documentation",
+      "camel": "knowledgeBaseDocumentation",
+      "productType": "Knowledge Base/Documentation"
+    },
+    {
+      "slug": "hyperlocal-services",
+      "camel": "hyperlocalServices",
+      "productType": "Hyperlocal Services"
+    },
+    {
+      "slug": "beauty-spa-wellness-service",
+      "camel": "beautySpaWellnessService",
+      "productType": "Beauty/Spa/Wellness Service"
+    },
+    {
+      "slug": "luxury-premium-brand",
+      "camel": "luxuryPremiumBrand",
+      "productType": "Luxury/Premium Brand"
+    },
+    {
+      "slug": "restaurant-food-service",
+      "camel": "restaurantFoodService",
+      "productType": "Restaurant/Food Service"
+    },
+    {
+      "slug": "fitness-gym-app",
+      "camel": "fitnessGymApp",
+      "productType": "Fitness/Gym App"
+    },
+    {
+      "slug": "real-estate-property",
+      "camel": "realEstateProperty",
+      "productType": "Real Estate/Property"
+    },
+    {
+      "slug": "travel-tourism-agency",
+      "camel": "travelTourismAgency",
+      "productType": "Travel/Tourism Agency"
+    },
+    {
+      "slug": "hotel-hospitality",
+      "camel": "hotelHospitality",
+      "productType": "Hotel/Hospitality"
+    },
+    {
+      "slug": "wedding-event-planning",
+      "camel": "weddingEventPlanning",
+      "productType": "Wedding/Event Planning"
+    },
+    {
+      "slug": "legal-services",
+      "camel": "legalServices",
+      "productType": "Legal Services"
+    },
+    {
+      "slug": "insurance-platform",
+      "camel": "insurancePlatform",
+      "productType": "Insurance Platform"
+    },
+    {
+      "slug": "banking-traditional-finance",
+      "camel": "bankingTraditionalFinance",
+      "productType": "Banking/Traditional Finance"
+    },
+    {
+      "slug": "online-course-e-learning",
+      "camel": "onlineCourseELearning",
+      "productType": "Online Course/E-learning"
+    },
+    {
+      "slug": "non-profit-charity",
+      "camel": "nonProfitCharity",
+      "productType": "Non-profit/Charity"
+    },
+    {
+      "slug": "music-streaming",
+      "camel": "musicStreaming",
+      "productType": "Music Streaming"
+    },
+    {
+      "slug": "video-streaming-ott",
+      "camel": "videoStreamingOtt",
+      "productType": "Video Streaming/OTT"
+    },
+    {
+      "slug": "job-board-recruitment",
+      "camel": "jobBoardRecruitment",
+      "productType": "Job Board/Recruitment"
+    },
+    {
+      "slug": "marketplace-p2p",
+      "camel": "marketplaceP2p",
+      "productType": "Marketplace (P2P)"
+    },
+    {
+      "slug": "logistics-delivery",
+      "camel": "logisticsDelivery",
+      "productType": "Logistics/Delivery"
+    },
+    {
+      "slug": "agriculture-farm-tech",
+      "camel": "agricultureFarmTech",
+      "productType": "Agriculture/Farm Tech"
+    },
+    {
+      "slug": "construction-architecture",
+      "camel": "constructionArchitecture",
+      "productType": "Construction/Architecture"
+    },
+    {
+      "slug": "automotive-car-dealership",
+      "camel": "automotiveCarDealership",
+      "productType": "Automotive/Car Dealership"
+    },
+    {
+      "slug": "photography-studio",
+      "camel": "photographyStudio",
+      "productType": "Photography Studio"
+    },
+    {
+      "slug": "coworking-space",
+      "camel": "coworkingSpace",
+      "productType": "Coworking Space"
+    },
+    {
+      "slug": "home-services-plumber-electrician",
+      "camel": "homeServicesPlumberElectrician",
+      "productType": "Home Services (Plumber/Electrician)"
+    },
+    {
+      "slug": "childcare-daycare",
+      "camel": "childcareDaycare",
+      "productType": "Childcare/Daycare"
+    },
+    {
+      "slug": "senior-care-elderly",
+      "camel": "seniorCareElderly",
+      "productType": "Senior Care/Elderly"
+    },
+    {
+      "slug": "medical-clinic",
+      "camel": "medicalClinic",
+      "productType": "Medical Clinic"
+    },
+    {
+      "slug": "pharmacy-drug-store",
+      "camel": "pharmacyDrugStore",
+      "productType": "Pharmacy/Drug Store"
+    },
+    {
+      "slug": "dental-practice",
+      "camel": "dentalPractice",
+      "productType": "Dental Practice"
+    },
+    {
+      "slug": "veterinary-clinic",
+      "camel": "veterinaryClinic",
+      "productType": "Veterinary Clinic"
+    },
+    {
+      "slug": "florist-plant-shop",
+      "camel": "floristPlantShop",
+      "productType": "Florist/Plant Shop"
+    },
+    {
+      "slug": "bakery-cafe",
+      "camel": "bakeryCafe",
+      "productType": "Bakery/Cafe"
+    },
+    {
+      "slug": "brewery-winery",
+      "camel": "breweryWinery",
+      "productType": "Brewery/Winery"
+    },
+    {
+      "slug": "airline",
+      "camel": "airline",
+      "productType": "Airline"
+    },
+    {
+      "slug": "news-media-platform",
+      "camel": "newsMediaPlatform",
+      "productType": "News/Media Platform"
+    },
+    {
+      "slug": "magazine-blog",
+      "camel": "magazineBlog",
+      "productType": "Magazine/Blog"
+    },
+    {
+      "slug": "freelancer-platform",
+      "camel": "freelancerPlatform",
+      "productType": "Freelancer Platform"
+    },
+    {
+      "slug": "marketing-agency",
+      "camel": "marketingAgency",
+      "productType": "Marketing Agency"
+    },
+    {
+      "slug": "event-management",
+      "camel": "eventManagement",
+      "productType": "Event Management"
+    },
+    {
+      "slug": "membership-community",
+      "camel": "membershipCommunity",
+      "productType": "Membership/Community"
+    },
+    {
+      "slug": "newsletter-platform",
+      "camel": "newsletterPlatform",
+      "productType": "Newsletter Platform"
+    },
+    {
+      "slug": "digital-products-downloads",
+      "camel": "digitalProductsDownloads",
+      "productType": "Digital Products/Downloads"
+    },
+    {
+      "slug": "church-religious-organization",
+      "camel": "churchReligiousOrganization",
+      "productType": "Church/Religious Organization"
+    },
+    {
+      "slug": "sports-team-club",
+      "camel": "sportsTeamClub",
+      "productType": "Sports Team/Club"
+    },
+    {
+      "slug": "museum-gallery",
+      "camel": "museumGallery",
+      "productType": "Museum/Gallery"
+    },
+    {
+      "slug": "theater-cinema",
+      "camel": "theaterCinema",
+      "productType": "Theater/Cinema"
+    },
+    {
+      "slug": "language-learning-app",
+      "camel": "languageLearningApp",
+      "productType": "Language Learning App"
+    },
+    {
+      "slug": "coding-bootcamp",
+      "camel": "codingBootcamp",
+      "productType": "Coding Bootcamp"
+    },
+    {
+      "slug": "cybersecurity-platform",
+      "camel": "cybersecurityPlatform",
+      "productType": "Cybersecurity Platform"
+    },
+    {
+      "slug": "developer-tool-ide",
+      "camel": "developerToolIde",
+      "productType": "Developer Tool / IDE"
+    },
+    {
+      "slug": "biotech-life-sciences",
+      "camel": "biotechLifeSciences",
+      "productType": "Biotech / Life Sciences"
+    },
+    {
+      "slug": "space-tech-aerospace",
+      "camel": "spaceTechAerospace",
+      "productType": "Space Tech / Aerospace"
+    },
+    {
+      "slug": "architecture-interior",
+      "camel": "architectureInterior",
+      "productType": "Architecture / Interior"
+    },
+    {
+      "slug": "quantum-computing-interface",
+      "camel": "quantumComputingInterface",
+      "productType": "Quantum Computing Interface"
+    },
+    {
+      "slug": "biohacking-longevity-app",
+      "camel": "biohackingLongevityApp",
+      "productType": "Biohacking / Longevity App"
+    },
+    {
+      "slug": "autonomous-drone-fleet-manager",
+      "camel": "autonomousDroneFleetManager",
+      "productType": "Autonomous Drone Fleet Manager"
+    },
+    {
+      "slug": "generative-art-platform",
+      "camel": "generativeArtPlatform",
+      "productType": "Generative Art Platform"
+    },
+    {
+      "slug": "spatial-computing-os-app",
+      "camel": "spatialComputingOsApp",
+      "productType": "Spatial Computing OS / App"
+    },
+    {
+      "slug": "sustainable-energy-climate-tech",
+      "camel": "sustainableEnergyClimateTech",
+      "productType": "Sustainable Energy / Climate Tech"
+    },
+    {
+      "slug": "personal-finance-tracker",
+      "camel": "personalFinanceTracker",
+      "productType": "Personal Finance Tracker"
+    },
+    {
+      "slug": "chat-and-messaging-app",
+      "camel": "chatAndMessagingApp",
+      "productType": "Chat & Messaging App"
+    },
+    {
+      "slug": "notes-and-writing-app",
+      "camel": "notesAndWritingApp",
+      "productType": "Notes & Writing App"
+    },
+    {
+      "slug": "habit-tracker",
+      "camel": "habitTracker",
+      "productType": "Habit Tracker"
+    },
+    {
+      "slug": "food-delivery-on-demand",
+      "camel": "foodDeliveryOnDemand",
+      "productType": "Food Delivery / On-Demand"
+    },
+    {
+      "slug": "ride-hailing-transportation",
+      "camel": "rideHailingTransportation",
+      "productType": "Ride Hailing / Transportation"
+    },
+    {
+      "slug": "recipe-and-cooking-app",
+      "camel": "recipeAndCookingApp",
+      "productType": "Recipe & Cooking App"
+    },
+    {
+      "slug": "meditation-and-mindfulness",
+      "camel": "meditationAndMindfulness",
+      "productType": "Meditation & Mindfulness"
+    },
+    {
+      "slug": "weather-app",
+      "camel": "weatherApp",
+      "productType": "Weather App"
+    },
+    {
+      "slug": "diary-and-journal-app",
+      "camel": "diaryAndJournalApp",
+      "productType": "Diary & Journal App"
+    },
+    {
+      "slug": "crm-and-client-management",
+      "camel": "crmAndClientManagement",
+      "productType": "CRM & Client Management"
+    },
+    {
+      "slug": "inventory-and-stock-management",
+      "camel": "inventoryAndStockManagement",
+      "productType": "Inventory & Stock Management"
+    },
+    {
+      "slug": "flashcard-and-study-tool",
+      "camel": "flashcardAndStudyTool",
+      "productType": "Flashcard & Study Tool"
+    },
+    {
+      "slug": "booking-and-appointment-app",
+      "camel": "bookingAndAppointmentApp",
+      "productType": "Booking & Appointment App"
+    },
+    {
+      "slug": "invoice-and-billing-tool",
+      "camel": "invoiceAndBillingTool",
+      "productType": "Invoice & Billing Tool"
+    },
+    {
+      "slug": "grocery-and-shopping-list",
+      "camel": "groceryAndShoppingList",
+      "productType": "Grocery & Shopping List"
+    },
+    {
+      "slug": "timer-and-pomodoro",
+      "camel": "timerAndPomodoro",
+      "productType": "Timer & Pomodoro"
+    },
+    {
+      "slug": "parenting-and-baby-tracker",
+      "camel": "parentingAndBabyTracker",
+      "productType": "Parenting & Baby Tracker"
+    },
+    {
+      "slug": "scanner-and-document-manager",
+      "camel": "scannerAndDocumentManager",
+      "productType": "Scanner & Document Manager"
+    },
+    {
+      "slug": "calendar-and-scheduling-app",
+      "camel": "calendarAndSchedulingApp",
+      "productType": "Calendar & Scheduling App"
+    },
+    {
+      "slug": "password-manager",
+      "camel": "passwordManager",
+      "productType": "Password Manager"
+    },
+    {
+      "slug": "expense-splitter-bill-split",
+      "camel": "expenseSplitterBillSplit",
+      "productType": "Expense Splitter / Bill Split"
+    },
+    {
+      "slug": "voice-recorder-and-memo",
+      "camel": "voiceRecorderAndMemo",
+      "productType": "Voice Recorder & Memo"
+    },
+    {
+      "slug": "bookmark-and-read-later",
+      "camel": "bookmarkAndReadLater",
+      "productType": "Bookmark & Read-Later"
+    },
+    {
+      "slug": "translator-app",
+      "camel": "translatorApp",
+      "productType": "Translator App"
+    },
+    {
+      "slug": "calculator-and-unit-converter",
+      "camel": "calculatorAndUnitConverter",
+      "productType": "Calculator & Unit Converter"
+    },
+    {
+      "slug": "alarm-and-world-clock",
+      "camel": "alarmAndWorldClock",
+      "productType": "Alarm & World Clock"
+    },
+    {
+      "slug": "file-manager-and-transfer",
+      "camel": "fileManagerAndTransfer",
+      "productType": "File Manager & Transfer"
+    },
+    {
+      "slug": "email-client",
+      "camel": "emailClient",
+      "productType": "Email Client"
+    },
+    {
+      "slug": "casual-puzzle-game",
+      "camel": "casualPuzzleGame",
+      "productType": "Casual Puzzle Game"
+    },
+    {
+      "slug": "trivia-and-quiz-game",
+      "camel": "triviaAndQuizGame",
+      "productType": "Trivia & Quiz Game"
+    },
+    {
+      "slug": "card-and-board-game",
+      "camel": "cardAndBoardGame",
+      "productType": "Card & Board Game"
+    },
+    {
+      "slug": "idle-and-clicker-game",
+      "camel": "idleAndClickerGame",
+      "productType": "Idle & Clicker Game"
+    },
+    {
+      "slug": "word-and-crossword-game",
+      "camel": "wordAndCrosswordGame",
+      "productType": "Word & Crossword Game"
+    },
+    {
+      "slug": "arcade-and-retro-game",
+      "camel": "arcadeAndRetroGame",
+      "productType": "Arcade & Retro Game"
+    },
+    {
+      "slug": "photo-editor-and-filters",
+      "camel": "photoEditorAndFilters",
+      "productType": "Photo Editor & Filters"
+    },
+    {
+      "slug": "short-video-editor",
+      "camel": "shortVideoEditor",
+      "productType": "Short Video Editor"
+    },
+    {
+      "slug": "drawing-and-sketching-canvas",
+      "camel": "drawingAndSketchingCanvas",
+      "productType": "Drawing & Sketching Canvas"
+    },
+    {
+      "slug": "music-creation-and-beat-maker",
+      "camel": "musicCreationAndBeatMaker",
+      "productType": "Music Creation & Beat Maker"
+    },
+    {
+      "slug": "meme-and-sticker-maker",
+      "camel": "memeAndStickerMaker",
+      "productType": "Meme & Sticker Maker"
+    },
+    {
+      "slug": "ai-photo-and-avatar-generator",
+      "camel": "aiPhotoAndAvatarGenerator",
+      "productType": "AI Photo & Avatar Generator"
+    },
+    {
+      "slug": "link-in-bio-page-builder",
+      "camel": "linkInBioPageBuilder",
+      "productType": "Link-in-Bio Page Builder"
+    },
+    {
+      "slug": "wardrobe-and-outfit-planner",
+      "camel": "wardrobeAndOutfitPlanner",
+      "productType": "Wardrobe & Outfit Planner"
+    },
+    {
+      "slug": "plant-care-tracker",
+      "camel": "plantCareTracker",
+      "productType": "Plant Care Tracker"
+    },
+    {
+      "slug": "book-and-reading-tracker",
+      "camel": "bookAndReadingTracker",
+      "productType": "Book & Reading Tracker"
+    },
+    {
+      "slug": "couple-and-relationship-app",
+      "camel": "coupleAndRelationshipApp",
+      "productType": "Couple & Relationship App"
+    },
+    {
+      "slug": "family-calendar-and-chores",
+      "camel": "familyCalendarAndChores",
+      "productType": "Family Calendar & Chores"
+    },
+    {
+      "slug": "mood-tracker",
+      "camel": "moodTracker",
+      "productType": "Mood Tracker"
+    },
+    {
+      "slug": "gift-and-wishlist",
+      "camel": "giftAndWishlist",
+      "productType": "Gift & Wishlist"
+    },
+    {
+      "slug": "running-and-cycling-gps",
+      "camel": "runningAndCyclingGps",
+      "productType": "Running & Cycling GPS"
+    },
+    {
+      "slug": "yoga-and-stretching-guide",
+      "camel": "yogaAndStretchingGuide",
+      "productType": "Yoga & Stretching Guide"
+    },
+    {
+      "slug": "sleep-tracker",
+      "camel": "sleepTracker",
+      "productType": "Sleep Tracker"
+    },
+    {
+      "slug": "calorie-and-nutrition-counter",
+      "camel": "calorieAndNutritionCounter",
+      "productType": "Calorie & Nutrition Counter"
+    },
+    {
+      "slug": "period-and-cycle-tracker",
+      "camel": "periodAndCycleTracker",
+      "productType": "Period & Cycle Tracker"
+    },
+    {
+      "slug": "medication-and-pill-reminder",
+      "camel": "medicationAndPillReminder",
+      "productType": "Medication & Pill Reminder"
+    },
+    {
+      "slug": "water-and-hydration-reminder",
+      "camel": "waterAndHydrationReminder",
+      "productType": "Water & Hydration Reminder"
+    },
+    {
+      "slug": "fasting-and-intermittent-timer",
+      "camel": "fastingAndIntermittentTimer",
+      "productType": "Fasting & Intermittent Timer"
+    },
+    {
+      "slug": "anonymous-community-confession",
+      "camel": "anonymousCommunityConfession",
+      "productType": "Anonymous Community / Confession"
+    },
+    {
+      "slug": "local-events-and-discovery",
+      "camel": "localEventsAndDiscovery",
+      "productType": "Local Events & Discovery"
+    },
+    {
+      "slug": "study-together-virtual-coworking",
+      "camel": "studyTogetherVirtualCoworking",
+      "productType": "Study Together / Virtual Coworking"
+    },
+    {
+      "slug": "coding-challenge-and-practice",
+      "camel": "codingChallengeAndPractice",
+      "productType": "Coding Challenge & Practice"
+    },
+    {
+      "slug": "kids-learning-abc-and-math",
+      "camel": "kidsLearningAbcAndMath",
+      "productType": "Kids Learning (ABC & Math)"
+    },
+    {
+      "slug": "music-instrument-learning",
+      "camel": "musicInstrumentLearning",
+      "productType": "Music Instrument Learning"
+    },
+    {
+      "slug": "parking-finder",
+      "camel": "parkingFinder",
+      "productType": "Parking Finder"
+    },
+    {
+      "slug": "public-transit-guide",
+      "camel": "publicTransitGuide",
+      "productType": "Public Transit Guide"
+    },
+    {
+      "slug": "road-trip-planner",
+      "camel": "roadTripPlanner",
+      "productType": "Road Trip Planner"
+    },
+    {
+      "slug": "vpn-and-privacy-tool",
+      "camel": "vpnAndPrivacyTool",
+      "productType": "VPN & Privacy Tool"
+    },
+    {
+      "slug": "emergency-sos-and-safety",
+      "camel": "emergencySosAndSafety",
+      "productType": "Emergency SOS & Safety"
+    },
+    {
+      "slug": "wallpaper-and-theme-app",
+      "camel": "wallpaperAndThemeApp",
+      "productType": "Wallpaper & Theme App"
+    },
+    {
+      "slug": "white-noise-and-ambient-sound",
+      "camel": "whiteNoiseAndAmbientSound",
+      "productType": "White Noise & Ambient Sound"
+    },
+    {
+      "slug": "home-decoration-and-interior-design",
+      "camel": "homeDecorationAndInteriorDesign",
+      "productType": "Home Decoration & Interior Design"
+    }
+  ],
+  "skipped": []
+}

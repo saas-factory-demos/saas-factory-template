@@ -1,0 +1,19 @@
+{
+  "name": "@saas-factory/tailwind-config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./preset.css",
+  "exports": {
+    ".": "./preset.css",
+    "./preset.css": "./preset.css",
+    "./tokens": "./tokens.json"
+  },
+  "files": [
+    "preset.css",
+    "tokens.json"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^4.0.0"
+  }
+}
